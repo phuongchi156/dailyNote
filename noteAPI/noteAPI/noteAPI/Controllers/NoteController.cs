@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using noteAPI.Model;
 
 namespace noteAPI.Controllers
 {
@@ -15,6 +15,12 @@ namespace noteAPI.Controllers
         public String GetAllNote()
         {
             return "xin chào";
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateNewNote(NoteModel model)
+        {
+            return Ok();
         }
     }
 }
